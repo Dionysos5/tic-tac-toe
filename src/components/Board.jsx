@@ -13,10 +13,10 @@ const Board = () => {
           return <Cell key={index} index={index} number={cell} handleClick={handleCellClick} />
         })}
       </div>
-      <div>
+      <div className='font-bold'>
         Current player: {turn} <br />
-        {winner && <div> Winner : {winner} </div>}
       </div>
+      {winner && <div className='font-bold text-3xl text-orange-400 animate-bounce'> Winner : {winner} </div>}
     </div>
   )
 }
